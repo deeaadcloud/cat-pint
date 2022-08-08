@@ -1,3 +1,14 @@
+- This my project on React (TypeScript) [Open](https://deeaadcloud.github.io/cat-pint/).
+
+# Task list
+
+- по умолчанию должна открываться вкладка "все котики"
+- у котика должна быть возможность добавить в "любимые" и убрать из "любимых"
+- данные о "любимых" котиках должны хранится на клиенте
+- на вкладке "любимые котики" должны отображаться добавленные в "любимые" котики
+- реализация адаптивности будет плюсом, но не обязательна
+- бесконечная прокрутка будет плюсом, но не обязательна
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
