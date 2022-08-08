@@ -1,4 +1,4 @@
-- This my project on React (TypeScript) [Open](https://deeaadcloud.github.io/cat-pint/).
+- This my cat-Pinterest on React (TypeScript) [Open](https://deeaadcloud.github.io/cat-pint/).
 
 # Task list
 
