@@ -8,6 +8,7 @@ import React from 'react';
 
 export function MainPage (){
     const {loading,error,allcats,favorite,addCats, removeCats} = useAllCats()
+    //Передача данных в локальное хранилище
     const isMounted = React.useRef(false)
     React.useEffect(() => {
         if (isMounted.current) {
@@ -16,6 +17,7 @@ export function MainPage (){
         }
         isMounted.current = true
     }, [favorite])
+    //Отрисовка компоненты Главная
     return (
         <div className="main">
           {loading && <Loading/>}

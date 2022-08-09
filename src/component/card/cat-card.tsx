@@ -8,7 +8,7 @@ interface CardProps {
     onRemove(id:string):void
 }
 
-
+//отрисовка карточек
 export const Card: React.FC<CardProps> = (props: CardProps) => {
     const [favorite, setFavorite] = useState('')
     const btnClassName = favorite ? 'active' : ''

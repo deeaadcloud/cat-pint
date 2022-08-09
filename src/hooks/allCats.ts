@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios, { AxiosError } from 'axios'
 import { Icard } from '../models';
 import { getFavItems } from '../utils/getFavItems';
 
-
+//Хук с основными функциями приложения
 export function useAllCats() {
 
     const favCat = getFavItems()
@@ -13,7 +13,7 @@ export function useAllCats() {
     const [error, setError] = useState('')
     
     
-
+//Вывод первоначальной страницы с API
     async function fetchCats() {
         try {
             setError('')
@@ -30,7 +30,7 @@ export function useAllCats() {
         }
 
     }
-    
+//Функция добавления котиков в Понравившиеся   
     const addCats = (favorite: Icard) => {
         setFavorite(prev => {
             const isCatInFav = prev.find(cat => cat.id === favorite.id);
@@ -46,19 +46,25 @@ export function useAllCats() {
 
         });
     };
+
+//Функция удаления котиков из Понравившихся   
     const removeCats = (id: string) => {
-        alert('Вы действительно хотите удалить котека?')
-        let i = favCat.findIndex((el: { id: string; }) => el.id === id)
-        const favCard = favCat[i] 
-        if (id) {
-            setFavorite(favCat => favCat.filter((favCard) => favCard.id !== id))
+        const result = window.confirm(`Вы действительно хотите удалить котека?`)
+        if (result){
+            let i = favCat.findIndex((el: { id: string; }) => el.id === id)
+            const favCard = favCat[i] 
+            if (id) {
+                setFavorite(favCat => favCat.filter((favCard) => favCard.id !== id))
+            }
         }
+        
     }
     
-    
+//Прорисовка Понравившегося стейта   
     useEffect(() => {
         setFavorite(favCat)
     }, [])
+//Прорисовка первоначального стейта
     useEffect(() => {
         fetchCats()
     }, [])

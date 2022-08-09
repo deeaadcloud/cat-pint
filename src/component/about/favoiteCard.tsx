@@ -8,7 +8,7 @@ interface CardProps {
     onRemove(id: string): void
 }
 
-
+//Отрисовка понравившихся карточек
 export const FavoriteCard: React.FC<CardProps> = (props: CardProps) => {
     
     const [favorite, setFavorite] = useState(props.card.id)
