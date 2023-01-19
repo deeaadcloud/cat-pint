@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cat-pint/static/css/main.10559680.css",
+    "main.js": "/cat-pint/static/js/main.60e1d397.js",
+    "index.html": "/cat-pint/index.html",
+    "main.10559680.css.map": "/cat-pint/static/css/main.10559680.css.map",
+    "main.60e1d397.js.map": "/cat-pint/static/js/main.60e1d397.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10559680.css",
+    "static/js/main.60e1d397.js"
+  ]
+}
